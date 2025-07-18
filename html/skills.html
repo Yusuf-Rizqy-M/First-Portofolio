@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/skills.css">
+    <title>Skills - Yusuf's Portfolio</title>
+    <link rel="icon" href="../asset/anime.png" type="image/jpg">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Azazel.</a>
+        <div class="burger"><i class="fa fa-bars"></i></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Project.html">Project</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2 class="title">Skills Saya</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="../asset/android-icon.png" alt="Android Dev">
+                <p class="skill-title">Android Dev</p>
+                <span>Java & Flutter</span>
+                <div class="progress orange"></div>
+            </div>
+            <div class="skill-card">
+                <img src="../asset/unity-icon.png" alt="Game Dev">
+                <p class="skill-title">Game Dev</p>
+                <span>Unity</span>
+                <div class="progress blue"></div>
+            </div>
+            <div class="skill-card">
+                <img src="../asset/vscode-icon.png" alt="Web Dev">
+                <p class="skill-title">Web Dev</p>
+                <span>Laravel & React</span>
+                <div class="progress light-blue"></div>
+            </div>
+            <div class="skill-card">
+                <img src="../asset/arduino-icon.png" alt="IoT">
+                <p class="skill-title">IoT</p>
+                <span>Arduino</span>
+                <div class="progress yellow"></div>
+            </div>
+            <div class="skill-card">
+                <img src="../asset/mysql-icon.png" alt="Backend Dev">
+                <p class="skill-title">Backend Dev</p>
+                <span>MySQL</span>
+                <div class="progress red"></div>
+            </div>
+            <div class="skill-card">
+                <img src="../asset/figma-icon.png" alt="UI/UX">
+                <p class="skill-title">UI/UX</p>
+                <span>Figma</span>
+                <div class="progress cyan"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+    </script>
+
+</body>
+
+</html>

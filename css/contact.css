@@ -1,0 +1,139 @@
+/* CONTACT PAGE STYLING */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+header {
+    padding-top: 20px;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.6s ease;
+    margin-left: 20px;
+}
+
+nav {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 4rem;
+}
+
+nav a {
+    font-size: 2.2rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: #005f99;
+    border-bottom: 3px solid #014a78;
+}
+
+/* Section Contact */
+section.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    background-color: #121212;
+}
+
+.contact-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-container p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    color: #ccc;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    background-color: #2b2b2b;
+    padding: 1.2rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #333;
+}
+
+.contact-item i {
+    font-size: 1.8rem;
+    color: #1387cf;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    word-break: break-all;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 2rem;
+    }
+
+    .contact-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-container p {
+        font-size: 1.2rem;
+    }
+
+    .contact-item {
+        font-size: 1.3rem;
+    }
+
+    .contact-item i {
+        font-size: 1.6rem;
+    }
+
+    .contact-item a {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo / Favicon -->
+    <link rel="icon" href="../asset/anime.png" type="image/png">
+
+    <!-- Font Awesome & CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+
+    <title>Home - Yusuf's Portfolio</title>
+</head>
+<body>
+    
+    <header>    
+        <a href="#" class="logo">Azazel.</a>
+        <div class="burger"><i class="fa fa-bars"></i></div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="Project.html">Project</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="home">
+        <div class="home-img">
+            <img src="../asset/anime.png" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Yusuf</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Welcome to my Portfolio Website. I want to learn more about coding. I can think critically so I can solve problems. I always try more and more to fix, develop, and finish my projects. Personally, I can also work with a team.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yusuf-rizqy-950396294/" target="_blank"> <i class="fa-brands fa-linkedin" ></i></a>
+                <a href="https://github.com/Yusuf-Rizqy-M" target="_blank"> <i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/s0urfphryu/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <!-- Tombol Download CV -->
+            <a href="../asset/Yusuf Rizqy Mubarok CV.pdf" class="btn" download>Download CV</a>
+        </div>
+    </section>
+    
+    <script>
+        window.addEventListener('beforeunload', function() {
+        document.body.classList.add('hidden');
+        });
+
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', function() {
+        var header = document.querySelector('header');
+         header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

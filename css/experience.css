@@ -1,0 +1,115 @@
+header {
+    padding-top: 20px;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.6s ease;
+    margin-left: 20px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    font-size: 2.2rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #005f99;
+    border-bottom: 3px solid #014a78;
+}
+
+.project-experience {
+    padding: 100px 50px 50px; /* Lebih banyak padding atas */
+    text-align: center;
+}
+
+.project-experience h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 30px;
+    margin-top: 10px; /* Turunin lagi kalau mau */
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #16213e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #00d4ff;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #ccc;
+    word-break: break-word;
+}
+
+.project-card a {
+    color: #00d4ff;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.project-card .tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.project-card .tech img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 995px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 90%;
+        max-width: 100%;
+    }
+}

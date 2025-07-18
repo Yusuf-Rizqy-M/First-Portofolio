@@ -1,0 +1,128 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html{
+        font-size: 50%;
+        overflow-x: hidden;
+    }
+
+    body.hidden {
+        opacity: 0;
+    }
+
+    body{
+        font-size: 50%;
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        background-color: #121212;
+        color: #ffffff;
+        opacity: 1;
+        transition: opacity 2s ease-in-out;
+    }
+
+    header {
+        margin: 0; 
+        padding: 1rem 9%;
+        position: fixed; 
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        background-color: #121212; 
+        z-index: 1000; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+
+    header.scrolled {
+        background-color: #121212; 
+    }
+
+
+    .burger {
+        display: none;
+        font-size: 3rem;
+        cursor: pointer;
+        color: #ffffff;
+        z-index: 101;
+    }
+
+    @media(max-width: 995px) {
+        .burger {
+            display: block;
+            font-size: 3rem;
+            cursor: pointer;
+            color: #ffffff;
+            z-index: 101;
+        }
+
+        nav {
+            position: absolute;
+            display: none;
+            top: 0;
+            right: 0;
+            width: 60%; 
+            border-left: 3px solid #005f99;
+            border-bottom-left-radius: 2rem;
+            padding: 1rem;
+            background-color: #161616;
+            z-index: 100;
+        }
+
+        nav.active {
+            display: block;
+        }
+
+        nav a {
+            display: block;
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+    }
+
+
+    .logo{
+        font-size: 3rem;
+        color: #ffffff;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.6s ease;
+    }
+
+    .logo:hover{
+        transform: scale(1.1);
+    }
+
+    nav a{
+        font-size: 2.2rem;
+        color: white;
+        margin-left: 4rem;
+        font-weight: 500;
+        transition: 0.3s ease;
+        border-bottom: 3px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active{
+        color: #005f99;
+        border-bottom: 3px solid #014a78;
+    }
+
+
+    section{
+        min-height: 100vh;
+        padding: 5rem 9% 5rem;
+    }
+

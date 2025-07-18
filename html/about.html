@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="icon" href="../asset/anime.png" type="image/jpg">
+    <title>About - Yusuf's Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">Azazel.</a>
+        <div class="burger"><i class="fa fa-bars"></i></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="Project.html">Project</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about">
+        <div class="about-content">
+            <h1>About Me</h1>
+            <p>Hi there! 👋
+                I'm Yusuf Rizqy, a passionate 17-year-old programmer who started coding at 15 years old.
+                Sometimes I get called Azazel in my nickname in game.
+                Currently, I'm obsessed with web and app development.
+                and I love exploring the world of Tech.
+                I've experience in languages like Java, C#, JavaScript, and Dart. 
+                I believe every problem has a solution, and I'm dedicated to finding it.
+                and I always hungry for more knowledge.</p>
+            <div class="button-like">
+                <button class="btn-food" onclick="openModal('foodModal')">Favorite Food</button>
+                <button class="btn-drink" onclick="openModal('drinkModal')">Favorite Drink</button>
+            </div>
+        </div>
+        <div class="about-img">
+            <img src="../asset/anime.png" alt="">
+        </div>
+    </section>
+
+
+    <div id="foodModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('foodModal')">&times;</span>
+            <h2>Food Quiz</h2>
+            <p>What is my favorite food?</p>
+            <input type="text" id="foodAnswer" placeholder="Your answer here">
+            <button onclick="checkFoodAnswer()">Submit</button>
+            <p id="foodResult"></p>
+        </div>
+    </div>
+
+    <div id="drinkModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('drinkModal')">&times;</span>
+            <h2>Drink Quiz</h2>
+            <p>What is my favorite drink?</p>
+            <input type="text" id="drinkAnswer" placeholder="Your answer here">
+            <button onclick="checkDrinkAnswer()">Submit</button>
+            <p id="drinkResult"></p>
+        </div>
+    </div>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Pastikan semua modal dalam keadaan tertutup saat halaman dimuat
+            document.getElementById("foodModal").style.display = "none";
+            document.getElementById("drinkModal").style.display = "none";
+        });
+
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "flex";
+        }
+
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+        }
+
+        function checkFoodAnswer() {
+            var answer = document.getElementById("foodAnswer").value.toLowerCase();
+            var result = document.getElementById("foodResult");
+
+            if (answer === "nasi goreng") {
+                result.innerHTML = "Correct! My favorite food is Nasi Goreng!";
+                result.style.color = "green";
+            } else {
+                result.innerHTML = "Wrong answer! Try again.";
+                result.style.color = "red";
+            }
+        }
+
+        function checkDrinkAnswer() {
+            var answer = document.getElementById("drinkAnswer").value.toLowerCase();
+            var result = document.getElementById("drinkResult");
+
+            if (answer === "teh") {  // Pastikan huruf kecil
+                result.innerHTML = "Correct! My favorite drink is Teh!";
+                result.style.color = "green";
+            } else {
+                result.innerHTML = "Wrong answer! Try again.";
+                result.style.color = "red";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
