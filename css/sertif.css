@@ -1,0 +1,127 @@
+header {
+    padding-top: 20px;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.6s ease;
+    margin-left: 20px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    font-size: 2.2rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #005f99;
+    border-bottom: 3px solid #005f99;
+}
+
+.container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+    margin-top: 13rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+.certificates {
+    padding: 5rem 1.5rem;
+}
+
+.grid-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+
+.card {
+    background-color: #1a103d;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    min-height: 20rem;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+.card-tech {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.card-tech img {
+    width: 3rem;
+    height: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
