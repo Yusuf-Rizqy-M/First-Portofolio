@@ -1,4 +1,4 @@
-
+/* Header Styles (Unchanged from original) */
 header {
     padding-top: 20px;
 }
@@ -9,12 +9,12 @@ header {
     font-weight: 800;
     cursor: pointer;
     transition: 0.6s ease;
-    margin-left: 20px; /* Jarak dari kiri */
+    margin-left: 20px;
 }
 
 nav {
-    display: inline-block; /* Atau flex, tergantung desain */
-    margin-top: 10px; /* Jarak dari atas */
+    display: inline-block;
+    margin-top: 10px;
     margin-left: 4rem;
 }
 
@@ -25,7 +25,7 @@ nav a {
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
-    text-decoration: none; /* Hapus garis bawah default link */
+    text-decoration: none;
 }
 
 nav a:hover,
@@ -33,49 +33,71 @@ nav a.active {
     color: #005f99;
     border-bottom: 3px solid #014a78;
 }
+
+/* About Section */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15rem;
-    background-color: #121212;
+    gap: 10rem;
+    background: #121212;
+    padding: 5rem 3rem;
+    min-height: 100vh;
 }
 
 .about .about-content h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     color: #ffffff;
     font-weight: 700;
-    line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.8rem;
+}
+
+.about .about-content h1::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: #1387cf;
 }
 
 .about-content p {
-    font-size: 1.8rem;
-    line-height: 1.6;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
     margin-top: 2rem;
+    max-width: 600px;
 }
 
 span {
-    color: #1387cf;
+    color: #40c4ff;
+    font-weight: 600;
 }
 
 .about-img img {
-    width: 25vw;
+    width: 22vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #005f99;
-    cursor: pointer;
-    transition: 0.2s linear;
-    margin-right: 5rem;
+    box-shadow: 0 0 20px rgba(64, 196, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-img img:hover {
-    font-size: 1.8rem;
-    font-weight: 500;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(64, 196, 255, 0.5);
 }
 
+/* Button Styles (Restored to original with slight scale and hand cursor on hover) */
 .button-like {
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .btn-food {
@@ -84,15 +106,16 @@ span {
     font-size: 1.8rem;
     padding: 1rem 2rem;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
 }
 
 .btn-food:hover {
     background-color: #00bfa5;
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .btn-drink {
@@ -101,18 +124,19 @@ span {
     font-size: 1.8rem;
     padding: 1rem 2rem;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
 }
 
 .btn-drink:hover {
     background-color: #0077b6;
     transform: scale(1.05);
+    cursor: pointer;
 }
 
-
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -121,117 +145,159 @@ span {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color:
+
+ rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background-color: #fff;
-    color: #000;
-    padding: 2.5rem;
-    border-radius: 10px;
-    width: 320px;
+    background: #ffffff;
+    color: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    width: 350px;
     max-width: 90%;
     text-align: center;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     position: relative;
-    font-size: 1.6rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 .close {
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 2rem;
+    font-size: 2.2rem;
     cursor: pointer;
-    color: #333;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #0288d1;
 }
 
 h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
 }
 
 p {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
 }
 
 input[type="text"] {
-    padding: 0.8rem;
+    padding: 1rem;
     margin-top: 0.5rem;
-    width: 90%;
+    width: 100%;
     font-size: 1.4rem;
     text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #40c4ff;
+    outline: none;
 }
 
 .modal-content button {
-    margin-top: 1rem;
-    padding: 0.8rem 2rem;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
     background-color: #005f99;
     color: white;
     border-radius: 5px;
-    cursor: pointer;
     border: none;
+    cursor: pointer;
     font-size: 1.4rem;
-    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .modal-content button:hover {
     background-color: #0077b6;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
-/* Responsif */
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .about {
+        gap: 5rem;
+        padding: 3rem 2rem;
+    }
+
+    .about .about-content h1 {
+        font-size: 4rem;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+    }
+
+    .about-img img {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 3rem 1.5rem;
+    }
+
+    .about .about-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-img img {
+        width: 50vw;
+        margin-top: 2rem;
+    }
+
+    .button-like {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-food, .btn-drink {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 480px) {
     .modal-content {
         width: 90%;
         padding: 2rem;
     }
-}
 
-
-@media (max-width: 480px) {
-
-    .btn-food,
-    .btn-drink {
-        flex: 1 1 100%;
-        text-align: center;
-        margin-right: 0;
-        margin-bottom: 1.5rem;
-    }
-}
-
-
-@media (max-width: 1000px) {
-    .about {
-        gap: 4rem;
-    }
-}
-
-@media(max-width:995px) {
-    .about {
-        flex-direction: column;
-        margin: 5rem 4rem;
+    .about .about-content h1 {
+        font-size: 3rem;
     }
 
-    .about .about-content h3 {
-        font-size: 2.5rem;
-    }
-
-    .about-content h1 {
-        font-size: 5rem;
+    .about-content p {
+        font-size: 1.4rem;
     }
 
     .about-img img {
         width: 70vw;
-        margin-top: 4rem;
     }
 }

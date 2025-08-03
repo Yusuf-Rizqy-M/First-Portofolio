@@ -1,7 +1,13 @@
 header {
     padding-top: 20px;
 }
-
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
 .logo {
     font-size: 3rem;
     color: #ffffff;
@@ -44,6 +50,9 @@ nav a.active {
     font-size: 36px;
     margin-bottom: 30px;
     margin-top: 10px; /* Turunin lagi kalau mau */
+    border-bottom: 4px solid #1482ff; /* Added blue underline */
+    display: inline-block; /* Ensures underline spans text width */
+    padding-bottom: 0.5rem; /* Adds spacing between text and underline */
 }
 
 .gallery {
