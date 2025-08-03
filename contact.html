@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +15,10 @@
 
     <title>Contact - Yusuf's Portfolio</title>
 </head>
+
 <body>
-    
-    <header>    
+
+    <header>
         <a href="#" class="logo">Azazel.</a>
         <div class="burger"><i class="fa fa-bars"></i></div>
         <nav>
@@ -25,40 +27,47 @@
             <a href="Project.html">Project</a>
             <a href="skills.html">Skills</a>
             <a href="contact.html" class="active">Contact</a>
+            <a href="sertifikat.html">Sertifikat</a>
         </nav>
     </header>
-    
-    <section class="home">
-        <div class="contact-container">
-            <h1>Contact Me</h1>
-            <p>For any questions, please drop a mail or contact me via the following:</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:yusufhabib290@gmail.com">yusufhabib290@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+6285786673009">+6285786673009</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/Yusuf-Rizqy-M" target="_blank">GitHub</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/yusuf-rizqy-mubarok/" target="_blank">LinkedIn</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-instagram"></i>
-                    <a href="https://www.instagram.com/s0urfphryu" target="_blank">Instagram</a>
-                </div>
+
+    <!-- <div class="container">
+        <h2 class="title">CONTACT ME</h2>
+    </div> -->
+
+    <!-- SECTION: Get in Touch -->
+    <section class="contact-section">
+        <div class="contact-box">
+            <div class="contact-left">
+                <h2 class="title">Let's Build Something<br>Great Together.</h2>
+                <p class="subtitle">Got a project in mind or just want to say hello? I’m always open to new ideas and
+                    collaborations.</p>
+            </div>
+
+            <div class="contact-right">
+                <form class="contact-form">
+                    <div class="name-group">
+                        <input type="text" placeholder="First name" required />
+                        <input type="text" placeholder="Last name" required />
+                    </div>
+
+                    <div class="input-icon-group">
+                        <span class="icon">@</span>
+                        <input type="email" placeholder="Email" required />
+                    </div>
+
+                    <textarea placeholder="How can I help you?" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </section>
-    
+
+
+
+
     <script>
-        window.addEventListener('beforeunload', function() {
+        window.addEventListener('beforeunload', function () {
             document.body.classList.add('hidden');
         });
 
@@ -69,10 +78,11 @@
             nav.classList.toggle('active');
         });
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             var header = document.querySelector('header');
             header.classList.toggle('scrolled', window.scrollY > 50);
         });
     </script>
 </body>
+
 </html>
