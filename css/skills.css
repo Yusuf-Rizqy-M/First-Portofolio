@@ -1,5 +1,5 @@
 body {
-    height: 100vh;
+    height: 100%;
     overflow-y: auto;
     margin: 0;
     padding: 0;
@@ -112,7 +112,7 @@ nav a.active {
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 500;
     transition: all 0.3s ease;
     color: #d1d5db;
